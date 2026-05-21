@@ -15,6 +15,7 @@ auth_router = APIRouter(prefix="/auth", tags=["auth"])
 async def home():
     return {"mensagem": "você acessou a rota padrão de autenticação", "autenticado": False}
 
+
 @auth_router.post("/criar_conta")
 
 # função assincrona que pega os prefixos que precisamos para a criação da conta e inicia uma conversa temporaria com o banco de dados

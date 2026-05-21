@@ -9,6 +9,13 @@ class UsuarioSchema(BaseModel):
     ativo: Optional[bool]
     admin: Optional[bool]
 
+    class ItemPedidoSchema(BaseModel):
+        sabor: str
+        tamanho: str
+        preco_unitario: float
+        quantidade: int
+
+
     class Config:
         from_attributes = True
 

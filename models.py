@@ -7,7 +7,7 @@ from sqlalchemy_utils.types import ChoiceType
 db = create_engine("sqlite:///database/banco.db")
 
 
-# criando a classe base do banco de dados, ela que faz tranformar o python em tqabela no banco
+# criando a classe base do banco de dados, ela que faz tranformar o python em tabela no banco
 Base = declarative_base()
 
 
@@ -59,13 +59,13 @@ class ItemPedido(Base):
     preco_unitario = Column("preco_unitario", Float)
     pedido = Column("pedido", ForeignKey("pedidos.id"))
 
-    def __init__(self, sabor, tamanho, preco_unitario, pedido):
+    def __init__(self, quantidade,a sabor, tamanho, preco_unitario, pedido):
         self.quantidade = quantidade
         self.pedido = pedido
         self.sabor = sabor
         self.tamanho = tamanho
         self.preco_unitario = preco_unitario
-        self.pedido = pedido
+
 
 # executa a criação do metadados do banco, cria efetivamente o banco
 

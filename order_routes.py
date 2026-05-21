@@ -13,3 +13,7 @@ async def pedidos():
 @order_router.post("/pedido")
 async def criar_pedido(pedido_schema: PedidoSchema, session: Session = Depends(pegar_sessao)):
     novo_pedido = Pedido(usuario=PedidoSchema.id_usuario)
+
+@order_router.get("/status")
+async def status():
+    return{"status": "sistema funcionando"}
