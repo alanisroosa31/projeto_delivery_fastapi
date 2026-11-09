@@ -1,5 +1,20 @@
+# Ambientes virtuais
+.venv/
+venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Variáveis de ambiente e segredos
 .env
-.venv
-__pycache__
-.idea
-database/
+
+# Testes e cobertura
+.coverage
+.pytest_cache/
+htmlcov/
+
+# IDEs e sistema
+.vscode/
+.idea/
+.DS_Store
